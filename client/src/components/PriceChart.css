@@ -1,0 +1,80 @@
+.price-chart-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between watchlist and chart */
+  padding: 20px; /* Padding around the container */
+  max-width: 1200px; /* Maximum width for the entire component */
+  margin: 0 auto; /* Center the container */
+}
+
+.watchlist-container {
+  flex: 1; /* Allow watchlist to take available space */
+  margin-right: 20px; /* Space between watchlist and chart */
+  border: 1px solid #ccc; /* Border around watchlist */
+  padding: 20px; /* Padding inside the watchlist */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background for watchlist */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  max-height: 600px; /* Maximum height for watchlist */
+}
+
+.chart-container {
+  flex: 2; /* Allow chart to take more space */
+  border: 1px solid #ccc; /* Border around chart */
+  padding: 20px; /* Padding inside the chart container */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background for chart */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Same shadow effect */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+}
+
+.watchlist {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.watchlist li {
+  margin-bottom: 10px; /* Space between list items */
+  display: flex; /* Flex layout for items */
+  justify-content: space-between; /* Space between ticker and button */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding inside list items */
+  border: 1px solid #eee; /* Border around list items */
+  border-radius: 5px; /* Rounded corners for list items */
+  background-color: #fff; /* White background for list items */
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.watchlist li:hover {
+  background-color: #f0f0f0; /* Change background on hover */
+}
+
+.view-chart-button {
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: #4caf50; /* Green button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.view-chart-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .price-chart-container {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .watchlist-container,
+  .chart-container {
+    width: 100%; /* Full width for containers */
+    margin: 0; /* Remove margin for better spacing */
+  }
+}

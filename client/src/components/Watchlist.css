@@ -1,0 +1,169 @@
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.watchlist-container {
+  flex: 1;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Add gap between flex items */
+}
+
+.form-container {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for better contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.watchlist-container {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Same light background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Same shadow for consistency */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  max-height: 400px; /* Limit height for watchlist */
+}
+
+.input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 120px); /* Responsive width calculation */
+  transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+.input:focus {
+  border-color: #4caf50; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.list-item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff; /* White background for list items */
+  transition: background-color 0.2s; /* Smooth transition for hover */
+}
+
+.list-item:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.remove-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .form-container,
+  .watchlist-container {
+    width: 100%; /* Full width for containers */
+    margin: 0; /* Remove margin for better spacing */
+  }
+}

@@ -1,0 +1,53 @@
+.navbar {
+  background-color: #007bff; /* Navbar background color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Space between title and nav items */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0; /* Aligns it to the top of the page */
+  left: 0; /* Aligns it to the left of the page */
+  width: 100%; /* Ensures it takes the full width */
+  z-index: 1000; /* Ensures it is above other content */
+}
+
+.navbar h2 {
+  color: white; /* Title color */
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Title font size */
+}
+
+.navbar ul {
+  list-style: none; /* Remove bullets from list */
+  display: flex; /* Horizontal layout */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar li {
+  margin-left: 20px; /* Spacing between items */
+  display: flex; /* Flexbox for aligning items */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar a,
+.navbar button {
+  background: none; /* No background for links and buttons */
+  border: none; /* No border */
+  color: white; /* Text color */
+  cursor: pointer; /* Hand cursor */
+  font-size: 16px; /* Font size */
+  padding: 10px 15px; /* Padding for buttons and links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover,
+.navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Add some margin to the top of the body content so it's not hidden behind the navbar */
+body {
+  margin-top: 60px; /* Adjust based on the height of the navbar */
+}
